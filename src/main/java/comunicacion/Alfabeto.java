@@ -20,8 +20,12 @@ public class Alfabeto extends Pictograma{
 	public String toString() {
 		String cadena = "";
 		
-		for (String letra : letras){
-		    cadena += letra + ", ";
+		for (int i = 0; i < letras.length; i++){
+			if (i == letras.length-1) {
+				cadena += letras[i];
+			} else {
+				cadena += letras[i] + ", ";
+			}
 		}
 		
 		return cadena;
