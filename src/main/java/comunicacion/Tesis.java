@@ -26,14 +26,23 @@ public class Tesis extends Escrito {
 
 	@Override
 	public String interpretacion() {
-		// TODO Auto-generated method stub
-		return null;
+		return interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		String texto = "";
+		
+		texto += getOrigen() + "\n";
+		texto += getTitulo() + "\n";
+		texto += getAutor() + "\n";
+		texto += getPaginas() + "\n";
+		texto += getIdea() + "\n";
+		texto += getArgumentos().length + "\n";
+		texto += getConclusion() + "\n";
+		texto += getReferencias();
+		
+		return texto;
 	}
 
 	public String getIdea() {

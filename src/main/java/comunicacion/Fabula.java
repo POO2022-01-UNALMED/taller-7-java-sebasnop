@@ -19,14 +19,20 @@ public class Fabula extends Escrito {
 
 	@Override
 	public String interpretacion() {
-		// TODO Auto-generated method stub
-		return null;
+		return interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		String texto = "";
+		
+		texto += getOrigen() + "\n";
+		texto += getTitulo() + "\n";
+		texto += getAutor() + "\n";
+		texto += getPaginas() + "\n";
+		texto += getEnsenanza();
+		
+		return texto;
 	}
 
 	public String getEnsenanza() {
