@@ -7,6 +7,8 @@ public class Libro extends Escrito {
 	private String edicion;
 	private String interpretacion;
 	
+	private static int factor = 2;
+
 	public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial,
 			String edicion, String interpretacion) {
 		super(origen, titulo, autor, paginas);
@@ -18,8 +20,7 @@ public class Libro extends Escrito {
 
 	@Override
 	public int palabrasTotales(int palabrasPagina) {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPaginas()*factor;
 	}
 
 	@Override
@@ -72,6 +73,14 @@ public class Libro extends Escrito {
 
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
+	}
+	
+	public static int getFactor() {
+		return factor;
+	}
+
+	public static void setFactor(int factor) {
+		Libro.factor = factor;
 	}
 
 }

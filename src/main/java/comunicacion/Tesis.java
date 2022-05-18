@@ -8,6 +8,8 @@ public class Tesis extends Escrito {
 	private String referencias;
 	private String interpretacion;
 	
+	private static int factor = 5;
+	
 	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String[] argumentos,
 			String conclusion, String referencias, String interpretacion) {
 		super(origen, titulo, autor, paginas);
@@ -20,8 +22,7 @@ public class Tesis extends Escrito {
 
 	@Override
 	public int palabrasTotales(int palabrasPagina) {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPaginas()*factor;
 	}
 
 	@Override
@@ -83,6 +84,14 @@ public class Tesis extends Escrito {
 
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
+	}
+
+	public static int getFactor() {
+		return factor;
+	}
+
+	public static void setFactor(int factor) {
+		Tesis.factor = factor;
 	}
 
 }

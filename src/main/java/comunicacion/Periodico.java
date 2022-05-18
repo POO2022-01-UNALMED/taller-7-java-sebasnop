@@ -6,6 +6,8 @@ public class Periodico extends Escrito {
 	private String primicia;
 	private String interpretacion;
 	
+	private static int factor = 10;
+	
 	public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
 			String interpretacion) {
 		super(origen, titulo, autor, paginas);
@@ -16,8 +18,7 @@ public class Periodico extends Escrito {
 
 	@Override
 	public int palabrasTotales(int palabrasPagina) {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPaginas()*factor;
 	}
 
 	@Override
@@ -61,6 +62,14 @@ public class Periodico extends Escrito {
 
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
+	}
+
+	public static int getFactor() {
+		return factor;
+	}
+
+	public static void setFactor(int factor) {
+		Periodico.factor = factor;
 	}
 	
 }

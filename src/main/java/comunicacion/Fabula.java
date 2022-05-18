@@ -5,6 +5,8 @@ public class Fabula extends Escrito {
 	private String ensenanza;
 	private String interpretacion;
 	
+	private static int factor = 1;
+	
 	public Fabula(String origen, String titulo, String autor, int paginas, String ensenanza, String interpretacion) {
 		super(origen, titulo, autor, paginas);
 		this.ensenanza = ensenanza;
@@ -13,8 +15,7 @@ public class Fabula extends Escrito {
 
 	@Override
 	public int palabrasTotales(int palabrasPagina) {
-		// TODO Auto-generated method stub
-		return 0;
+		return getPaginas()*factor;
 	}
 
 	@Override
@@ -49,6 +50,14 @@ public class Fabula extends Escrito {
 
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
+	}
+
+	public static int getFactor() {
+		return factor;
+	}
+
+	public static void setFactor(int factor) {
+		Fabula.factor = factor;
 	}
 
 }
